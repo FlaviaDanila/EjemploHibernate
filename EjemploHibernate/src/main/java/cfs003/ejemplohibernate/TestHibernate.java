@@ -28,7 +28,7 @@ public class TestHibernate {
             Session session = sessionFactory.openSession();
             session.beginTransaction();
             Cliente c = (Cliente) session.load(Cliente.class, 1);
-            System.out.println(c);
+            System.out.println("Nombre: " + c.getNombre() + "Apellido: " + c.getApellido() + "Dirección: " + c.getDireccion() + "Activo: " + c.getActivo());
             session.getTransaction().commit();
             session.close();
             sessionFactory.close();
